@@ -1,10 +1,56 @@
----
-title: class
-layout: ./app/layout.ejs
-engine: ejs
-current: index
----
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    class
+  </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <div class="header bg-dark">
+    <nav class="navbar navbar-expand-md navbar-light py-3">
+      <div class="container">
+        <h1 class="d-none d-md-block"><a class="navbar-brand" href="#"><img src="assets/images/logo.svg" alt="logo"
+              class="logo d-inline-md-block"></a>
+        </h1>
+        <h1 class="d-block d-md-none"><a class="navbar-brand py-0 m-0" href="#"><img src="assets/images/logo2.svg"
+              alt="logo2" class="logo2 d-inline-md-block"></a>
+        </h1>
+        <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="material-symbols-outlined text-primary menu">
+            drag_handle
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item m-auto ms-md-0 pt-3 pt-md-0">
+              <a class="nav-link active fs-6 text-light" href="#">首頁</a>
+            </li>
+            <li class="nav-item m-auto ms-md-5 pt-3 pt-md-0">
+              <a class="nav-link fs-6 text-light" href="pagetwo.html">課程介紹</a>
+            </li>
+            <li class="nav-item m-auto ms-md-5 pt-3 pt-md-0">
+              <a class="nav-link fs-6 text-light" href="#"><span
+                  class="material-symbols-outlined text-light align-middle account">
+                  account_circle
+                </span>登入</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <span class="navbarline"></span>
+    </nav>
+  </div>
+  
 <div class="class bg-dark3 py-5">
     <div class="container">
         <ul class="classlist d-flex justify-content-start justify-content-xl-center">
@@ -125,3 +171,14 @@ current: index
         </div>
     </div>
 </section>
+
+    <footer class="footer text-center py-3 bg-dark2">
+      <p class="font-momo coding d-none d-md-block">Coding Home © 2022 All Rights Reserved</p>
+      <p class="font-momo coding2 d-block d-md-none">Coding Home © 2022 All Rights Reserved</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
