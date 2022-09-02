@@ -1,0 +1,358 @@
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+@mixin gradient-x($start-color: $primary, $end-color: $secondary, $start-percent: null, $end-percent: null) {
+    background-image: linear-gradient(104deg, $start-color $start-percent, $end-color $end-percent);
+}
+
+.gradient-x {
+    @include gradient-x;
+}
+
+.gradient-text {
+    background-image: linear-gradient(180deg, $primary , $secondary);
+    background-clip: text;
+    color: transparent;
+}
+
+.fs-8 {
+    font-size: 14px;
+}
+
+.br8 {
+    border-radius: 8px;
+}
+
+.br12 {
+    border-radius: 12px;
+}
+
+.br24up {
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+}
+
+.br24down {
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+}
+
+.bannerBox {
+    background: url(../images/bg_home.jpg) center;
+    height: 680px;
+    background-size: cover;
+    padding-top: 206px;
+
+
+    @media (max-width:767.98px) {
+        background: url(../images/bg_home_mobile.jpg) center;
+        height: 336px;
+        background-size: cover;
+        padding-top: 85px;
+    }
+
+    .square {
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+    }
+}
+
+
+.easy {
+
+    .bar {
+        display: block;
+        width: 50px;
+        height: 2px;
+        background-color: $primary;
+    }
+
+    .material-symbols-outlined {
+        font-size: 48px;
+    }
+
+    .outline {
+        border: 1px solid transparent;
+
+        &:hover {
+            border: 1px solid $primary;
+            background-color: #202020;
+        }
+
+        &:hover .material-symbols-outlined {
+            background-image: linear-gradient(180deg, $secondary, $primary);
+            background-clip: text;
+            color: transparent;
+        }
+    }
+
+}
+
+.class,
+.program,
+.popular,
+.blog,
+.exclusive {
+    .bar {
+        display: block;
+        width: 50px;
+        height: 2px;
+        background-color: $primary;
+    }
+
+    .one {
+        position: relative;
+
+        .num {
+            position: absolute;
+            top: -36px;
+            left: 36px;
+        }
+    }
+}
+
+
+
+.programlist {
+    overflow: auto;
+
+    .listitem:hover {
+        background-color: $primary;
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+
+
+.popular {
+    background-color: #000000;
+
+    .mae {
+        padding-bottom: 37px;
+
+        @media (max-width:1199.98px) {
+            padding-bottom: 8px;
+        }
+    }
+}
+
+.listBg {
+    position: relative;
+    height: 615px;
+
+    @media (max-width:767.98px) {
+        height: 263px;
+    }
+
+    &:nth-child(1) {
+        background: url(../images/info01.jpg);
+        background-size: cover;
+    }
+
+    &:nth-child(2) {
+        background: url(../images/info02.jpg);
+        background-size: cover;
+    }
+
+    &:nth-child(3) {
+        background: url(../images/info03.jpg);
+        background-size: cover;
+    }
+
+    &:nth-child(4) {
+        background: url(../images/info04.jpg);
+        background-size: cover;
+    }
+
+    .listmask {
+        background: rgba(0, 0, 0, 0.6);
+
+        &:hover {
+            background: transparent;
+        }
+
+        &:hover .material-symbols-outlined {
+            color: $primary;
+        }
+
+        &:hover .info {
+            color: #fff;
+        }
+
+        &:hover .bar {
+            background-color: $primary;
+        }
+    }
+
+    .bar {
+        display: inline-block;
+        width: 50px;
+        height: 2px;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+    }
+
+    .material-symbols-outlined,
+    .info {
+        color: $light;
+    }
+}
+
+.blog {
+    .squareRounded {
+        display: none;
+        width: 32px;
+        height: 32px;
+
+        &-topLeft {
+            border-top: 2px solid #62DB54;
+            border-left: 2px solid #62DB54;
+            border-top-left-radius: 10px;
+        }
+
+        &-topRight {
+            border-top: 2px solid #62DB54;
+            border-right: 2px solid #62DB54;
+            border-top-right-radius: 10px;
+        }
+
+        &-bottomLeft {
+            border-bottom: 2px solid #62DB54;
+            border-left: 2px solid #62DB54;
+            border-bottom-left-radius: 10px;
+        }
+
+        &-bottomRight {
+            border-bottom: 2px solid #62DB54;
+            border-right: 2px solid #62DB54;
+            border-bottom-right-radius: 10px;
+        }
+    }
+
+    .card:hover {
+        .squareRounded {
+            display: block;
+        }
+    }
+}
+
+
+.exclusive {
+    background: url(../images/bg_share.jpg) no-repeat;
+    height: 733px;
+    background-size: cover;
+
+    .exclusiveinfo {
+        height: 440px;
+
+        @media (max-width:767.98px) {
+            height: 600px;
+        }
+
+    }
+
+    .bgline::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 90%;
+        border: 1px solid #7C7E77;
+        top: 10px;
+        left: -12px;
+        z-index: -1;
+        border-radius: 24px;
+
+        @media (max-width:1199.98px) {
+            height: 64%;
+        }
+    }
+
+    .cardinfo {
+        position: relative;
+        position: absolute;
+        right: 210px;
+        bottom: 18px;
+        max-width: 416px;
+        width: 100%;
+        color: #494755;
+        border-radius: 24px;
+        border-bottom-left-radius: 0;
+
+        @media (max-width:767.98px) {
+            right: 0;
+            bottom: 30px;
+        }
+
+        .student {
+            position: absolute;
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            top: -50px;
+            right: 32px;
+        }
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        content: '';
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        position: unset;
+        width: 24px;
+        height: 24px;
+        color: #62DB54;
+    }
+
+    .swiper-pagination {
+        position: unset;
+        width: auto;
+
+        .swiper-pagination-bullet {
+            background-color: #62DB54;
+            opacity: initial;
+
+            &-active {
+                width: 16px;
+                border-radius: 100px;
+            }
+        }
+    }
+
+    .swiper-buttons {
+        bottom: 12px;
+        left: 30%;
+        transform: translateX(-50%);
+        z-index: 10;
+        position: absolute;
+
+        @media (max-width: 991px) {
+            position: initial;
+            transform: none;
+        }
+
+        @media (max-width:767.98px) {
+            left: 0;
+        }
+    }
+}
+
+.reserve {
+    background-color: #000000;
+
+    .reserveinfo {
+        background-color: #202020;
+        max-width: 966px;
+        width: 100%;
+    }
+
+    .material-symbols-outlined {
+        font-size: 80px;
+    }
+}
